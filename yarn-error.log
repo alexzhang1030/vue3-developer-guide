@@ -1,0 +1,36 @@
+Arguments: 
+  D:\nodejs\node.exe D:\nodejs\node_global\node_modules\yarn\bin\yarn.js init
+
+PATH: 
+  D:\jdk 11\bin;D:\VMware\bin\;D:\Python\Python39\Scripts\;D:\Python\Python39\;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;D:\app\hp\product\11.1.0\db_1\bin;D:\jdk 1.8\bin;D:\jdk1.7\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Windows\System32;D:\apache-maven-3.5.0\bin;D:\apache-tomcat-9.0.20\bin;D:\apache-tomcat-9.0.20\lib;D:\Python\Python37;D:\Calibre2\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\nodejs\;%PYENV%\bin;%PYENV%\shims;C:\Users\hp\AppData\Local\Yarn\bin;C:\Program Files\dotnet\;D:\nodejs\node_global;D:\flutter\bin;D:\Go\bin;D:\nodejs\node_global\bin;D:\VSCode\bin;D:\LxRunOffline;C:\Users\hp\.pyenv\pyenv-win\bin;C:\Users\hp\.pyenv\pyenv-win\shims;C:\Users\hp\scoop\shims;C:\Users\hp\AppData\Local\Microsoft\WindowsApps;D:\PyCharm\bin;C:\Users\hp\AppDat;C:\Users\hp\go\bin;C:\Users\hp\AppData\Local\Microsoft\WindowsApps
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  14.16.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (D:\nodejs\node_global\node_modules\yarn\lib\cli.js:137143:13)
+      at Interface.emit (events.js:315:20)
+      at Interface._ttyWrite (readline.js:875:16)
+      at ReadStream.onkeypress (readline.js:213:10)
+      at ReadStream.emit (events.js:315:20)
+      at emitKeys (internal/readline/utils.js:345:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1144:36)
+      at ReadStream.emit (events.js:315:20)
+      at addChunk (internal/streams/readable.js:309:12)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
