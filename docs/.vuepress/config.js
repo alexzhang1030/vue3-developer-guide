@@ -2,6 +2,7 @@ const basicConfig = require('./configs/index')
 
 module.exports = {
   title: 'Vue 3 开发指南',
+  base: '/vue3-developer-guide/',
   themeConfig: {
     nav: basicConfig.navbar,
   },
