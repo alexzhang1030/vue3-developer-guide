@@ -19,6 +19,6 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.5.9
         with:
-          ACCESS_TOKEN: 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   // 这里需要设置成你的 token
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}   // 这里需要设置成你的 token
           BRANCH: gh_pages
           FOLDER: docs/.vuepress/dist
