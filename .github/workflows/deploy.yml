@@ -4,9 +4,6 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@main
-
       - name: vuepress-deploy
         uses: alexzhang1030/vue3-developer-guide@main
         env:
