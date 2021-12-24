@@ -5,11 +5,11 @@ on:
   # 在push阶段触发
   push:
     # 对应的分支
-    branches: [ main ]
+    branches: [main]
   # 在PR阶段触发
   pull_request:
     # 对应的分支
-    branches: [ main ]
+    branches: [main]
 # 执行的任务
 jobs:
   # 任务名称
@@ -34,13 +34,13 @@ jobs:
       - run: git config --global user.email "1642114555@qq.com"
       - run: git config --global user.name "alexzhang1030"
         # 执行安装跟打包命令
-      - run: npm install && npm run docs:build
+      - run: yarn install && yarn run docs:build
       - name: Deploy
         # 这个是第三方提供的库，可以推送打包后的内容到指定分支
         uses: peaceiris/actions-gh-pages@v3
         with:
           # 这边需要设置第二步获取到的deploy key，否则会提示没有权限推送代码
-          deploy_key: ${{ secrets.gh_deploy }}
+          deploy_key: ${{ secrets.ACCESS_TOKEN }}
           # 推送到该仓库中，地址格式为github名称/仓库名
           external_repository: alexzhang1030/vue3-developer-guide
           # 推送的分支
