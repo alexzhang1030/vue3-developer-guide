@@ -8,7 +8,7 @@ jobs:
         uses: actions/checkout@main
 
       - name: vuepress-deploy
-        uses: jenkey2011/vuepress-deploy@main
+        uses: alexzhang1030/vue3-developer-guide@main
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           TARGET_REPO: alexzhang1030/vue3-developer-guide
