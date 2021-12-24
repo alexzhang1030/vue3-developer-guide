@@ -40,7 +40,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           # 这边需要设置第二步获取到的deploy key，否则会提示没有权限推送代码
-          deploy_key: ${{ secrets.ACCESS_TOKEN }}
+          deploy_key: ${{ secrets.gh_deploy }}
           # 推送到该仓库中，地址格式为github名称/仓库名
           external_repository: alexzhang1030/vue3-developer-guide
           # 推送的分支
