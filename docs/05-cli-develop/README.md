@@ -86,6 +86,7 @@ test-project
   - 创建 `styles`，放 css 文件
   - 创建 `utils` 放公共工具函数
   - 创建 `api` 放 api 函数
+  - 创建 `plugins` 放需要用到的组件
 
 :::tip
 值得注意的是，vite 默认创建了一个路径别名`alias`，指向的是`./src/`
@@ -97,4 +98,5 @@ test-project
 
 ### polyfill 低版本浏览器
 
+为了兼顾低版本浏览器可能无法运行现在代码，可以用一个插件 polyfill 低版本浏览器
 `vite` 插件
