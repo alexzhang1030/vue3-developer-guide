@@ -1,14 +1,26 @@
-name: Build and Deploy
-on: [push]
+name: gh_pages_deploy
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: vuepress-deploy
-        uses: alexzhang1030/vue3-developer-guide@main
-        env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          TARGET_REPO: alexzhang1030/vue3-developer-guide
-          TARGET_BRANCH: gh_pages
-          BUILD_SCRIPT: yarn && yarn build
-          BUILD_DIR: docs/.vuepress/dist/
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Compiling start
+        run: echo Compiling start!
+      - run: git config --global user.email "1642114555@qq.com"
+      - run: git config --global user.name "alexzhang1030"
+      - run: yarn install && yarn run docs:build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACCESS_TOKEN }}
+          external_repository: alexzhang1030/vue3-developer-guide
+          publish_branch: gh_pages
+          publish_dir: docs/.vuepress/dist
