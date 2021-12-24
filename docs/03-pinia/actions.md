@@ -1,3 +1,7 @@
+---
+autoSort: 3
+---
+
 # pinia 核心概念 - actions
 
 ## 定义 actions
@@ -161,5 +165,3 @@ export default {
   },
 }
 ```
-
-test auto deploy - 2

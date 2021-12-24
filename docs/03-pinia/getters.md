@@ -1,3 +1,7 @@
+---
+autoSort: 4
+---
+
 # pinia 核心概念 - getters
 
 ## 定义 getters

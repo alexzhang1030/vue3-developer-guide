@@ -1,3 +1,7 @@
+---
+autoSort: 5
+---
+
 # pinia 核心概念 - state
 
 在大多数情况下，state 是 store 的核心部分。在 pinia 中，state 被定义为一个返回初始 state 的函数。这使得 pinia 可以在服务器和客户端都工作。

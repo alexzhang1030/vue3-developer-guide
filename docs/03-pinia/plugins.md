@@ -1,3 +1,7 @@
+---
+autoSort: 2
+---
+
 # pinia 核心概念 - plugins
 
 通过一些底层 API，Pinia 商店可以可以被完全扩展。以下是可以执行的操作：
@@ -306,6 +310,38 @@ declare module 'pinia' {
 
 :::
 
-## 注入新 state 类型支持
+### 注入新 state 类型支持
 
-当添加新的属性的时候（包括 store 和 `store.$state`），你需要把
+当添加新的属性的时候（包括 store 和 `store.$state`），你需要向`PiniaCustomProperties`添加新属性，它只接收 State 的泛型 `S`
+
+```ts
+import 'pinia'
+
+declare module 'pinia' {
+  export interface PiniaCustomStateProperties<S> {
+    hello: string
+  }
+}
+```
+
+### 添加新的选项
+
+当 plugins 在创建 store 的时候抓取自定义选项时，你需要扩展`DefineStoreOptionsBase`，与 `PiniaCustomProperties` 不同的是，它可以用两个泛型：State 的泛型和 Store 的泛型：`S` 和 `Store`。允许你限制可以定义的内容。例如，你可以使用 `action` 的名称。
+
+```ts
+import 'pinia'
+
+declare module 'pinia' {
+  export interface DefineStoreOptionsBase<S, Store> {
+    debounce?: Partial<Record<keyof StoreActions<Store>, number>>
+  }
+}
+```
+
+:::tip
+还有一个`StoreGetters`类型，用于从 store 中获取 `getters`。你也可以分别通过扩展 `DefineStoreOptions` 和 `DefineSetupStoreOptions` 类型来扩展 `setup store` 和 `options store` 的选项
+:::
+
+### Nuxt.js
+
+TODO
